@@ -7,8 +7,13 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-
-<%= yield %>
-
+  <header class="navbar">
+    <div class="container">
+      <%= link_to "Gatebook", '#', id: "logo" %>
+    </div>
+  </header>
+  <div class="container">
+    <%= yield %>
+  </div>
 </body>
 </html>
