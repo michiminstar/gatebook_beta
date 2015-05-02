@@ -1,0 +1,3 @@
+# Progate Ruby on Railsレッスン：サンプルアプリケーション
+
+by Progate, Inc. (http://prog-8.com/)
