@@ -1,5 +1,8 @@
 /* mixins, variables, etc
 ================================ */
+$gray: #848484;
+$gray-medium-light: #eaeaea;
+$gray-dark: #364a4d;
 @mixin box_sizing {
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
@@ -11,9 +14,10 @@
 ================================ */
 body {
   padding-top: 60px;
+  color: $gray-dark;
 }
 
-a{
+a {
   text-decoration: none;
 }
 
@@ -74,3 +78,32 @@ p {
     text-decoration: none;
   }
 }
+
+/* フッター
+================================ */
+footer {
+  margin-top: 45px;
+  padding-top: 5px;
+  border-top: 1px solid $gray-medium-light;
+  color: $gray;
+  small {
+    float: left;
+  }
+}
+
+/* サインアップ&ログイン
+================================ */
+.greeting {
+  padding-top: 40px;
+  margin-bottom: 30px;
+  width: 40%;
+  h1 {
+    font-size: 4em;
+    line-height: 1.2;
+  }
+  img {
+    width: 40%;
+  }
+}
+
+
