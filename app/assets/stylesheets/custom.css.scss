@@ -77,6 +77,8 @@ a {
   opacity: 0.8;
   border-radius: 3px;
   border: 1px solid transparent;
+  font-size: 16px;
+  cursor: pointer;
 }
 
 /* フォント
@@ -192,15 +194,12 @@ footer {
 .account-info-form {
   width: 40%;
   border: 0;
-  padding: 20px;
   margin-top: 160px;
   margin-bottom: 30px;
   float: right;
 }
 
 .signup-btn {
-  cursor: pointer;
-  font-size: 18px;
   background-color: $green-light;
   &:hover {
     background-color: lighten($green-light, 5%)
@@ -208,11 +207,29 @@ footer {
 }
 
 .login-btn {
-  cursor: pointer;
   font-size: 18px;
   background-color: $blue-light;
   &:hover {
     background-color: lighten($blue-light, 5%)
+  }
+}
+
+
+/* プロフィール編集ページ
+================================ */
+.edit {
+  width: 480px;
+  margin: 0 auto;
+  .account-info-form {
+    width: 100%;
+    float: none;
+    margin-top: 80px;
+  }
+}
+.save-btn {
+  background-color: $green-light;
+  &:hover {
+    background-color: lighten($green-light, 5%)
   }
 }
 
@@ -259,6 +276,28 @@ input {
   @extend .has-error;
 }
 
+/* アラート
+================================ */
+.alert {
+  margin-top: 6px;
+  padding: 15px;
+  border: 1px solid transparent;
+  border-radius: 4px;
+  font-size: small;
+}
+
+.alert-success {
+  color: #3c763d;
+  background-color: #dff0d8;
+  border-color: #d6e9c6;
+}
+
+.alert-danger {
+  background-color: #f2dede;
+  border-color: #ebccd1;
+  color: #a94442;
+}
+
 /* サイドバー (ユーザープロフィール)
 ================================ */
 aside {
@@ -284,5 +323,16 @@ aside {
       margin-bottom: 3px;
       margin-top: 0px;
     }
+  }
+}
+
+/* 全てのユーザー一覧
+================================ */
+.users {
+  margin: 0;
+  li {
+    overflow: auto;
+    padding: 10px 0;
+    border-bottom: 1px solid $gray-light;
   }
 }
