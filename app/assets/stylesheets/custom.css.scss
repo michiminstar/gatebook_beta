@@ -55,6 +55,12 @@ a {
   padding-right: 15px;
 }
 
+.wrapper {
+  width: 100%;
+}
+
+/* ボタン
+================================ */
 .btn{
   padding: 8px 24px;
   color: white;
@@ -130,7 +136,6 @@ p {
   }
 }
 
-
 /* フッター
 ================================ */
 footer {
@@ -157,10 +162,6 @@ footer {
   img {
     width: 40%;
   }
-}
-
-.signup-wrapper {
-  width: 100%;
 }
 
 .signup-form {
@@ -224,5 +225,30 @@ input {
   @extend .has-error;
 }
 
-
-
+/* サイドバー (ユーザープロフィール)
+================================ */
+aside {
+  section.user_info {
+    margin-top: 20px;
+  }
+  section {
+    padding: 10px 0;
+    margin-top: 20px;
+    &:first-child {
+      border: 0;
+      padding-top: 0;
+    }
+    span {
+      display: block;
+      margin-bottom: 3px;
+      line-height: 1;
+    }
+    h1 {
+      font-size: 1.4em;
+      text-align: left;
+      letter-spacing: -1px;
+      margin-bottom: 3px;
+      margin-top: 0px;
+    }
+  }
+}
