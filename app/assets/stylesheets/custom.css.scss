@@ -1,8 +1,9 @@
 /* mixins, variables, etc
 ================================ */
 $gray: #848484;
-$gray-medium-light: #eaeaea;
-$gray-dark: #364a4d;
+$gray-light: #eaeaea;
+// $gray-medium-light: #b0afaf;
+$blue-dark: #364a4d;
 @mixin box_sizing {
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
@@ -14,7 +15,7 @@ $gray-dark: #364a4d;
 ================================ */
 body {
   padding-top: 60px;
-  color: $gray-dark;
+  color: $blue-dark;
 }
 
 a {
@@ -35,7 +36,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 h1 {
-  font-size: 3em;
+  font-size: 2em;
   letter-spacing: -2px;
   margin-bottom: 30px;
 }
@@ -84,7 +85,7 @@ p {
 footer {
   margin-top: 45px;
   padding-top: 5px;
-  border-top: 1px solid $gray-medium-light;
+  border-top: 1px solid $gray-light;
   color: $gray;
   small {
     float: left;
