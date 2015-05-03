@@ -1,0 +1,23 @@
+<div class="wrapper">
+  <div class="greeting">
+    <h1>Gatebookへ<br>ようこそ!</h1>
+
+    <%= image_tag("wanko.png", alt: "Gatebook wanko", id: "wanko") %>
+  </div>
+
+  <div class="form-wrapper">
+    <div class="signup-form">
+        <%= form_for(@user) do |f| %>
+          <%= render 'shared/error_messages' %>
+
+          <%= f.text_field :name, :placeholder => "名前", class: 'form-control' %>
+
+          <%= f.email_field :email, :placeholder => "メールアドレス", class: 'form-control' %>
+
+          <%= f.password_field :password, :placeholder => "パスワード", class: 'form-control' %>
+
+          <%= f.submit "登録する", class: "btn signup-btn" %>
+      <% end %>
+    </div>
+  </div>
+</div>
