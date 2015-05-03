@@ -140,7 +140,7 @@ p {
   }
   li {
     line-height: 65px;
-    padding: 0 18px 0 0;
+    padding: 0 18px;
     float: left;
     color: white;
   }
@@ -149,6 +149,7 @@ p {
 .vertical-line {
   height: 22px;
   margin-top: 22px;
+  margin-right: -36px;
   border-left: 1px solid rgba(255,255,255,0.8);
 }
 
