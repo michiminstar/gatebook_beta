@@ -1,23 +1,21 @@
-<div class="greeting">
-  <h1>Gatebookへ<br>ようこそ!</h1>
+<div class="signup-wrapper">
+  <div class="greeting">
+    <h1>Gatebookへ<br>ようこそ!</h1>
 
-  <%= image_tag("wanko.png", alt: "Gatebook wanko", id: "wanko") %>
-</div>
+    <%= image_tag("wanko.png", alt: "Gatebook wanko", id: "wanko") %>
+  </div>
 
-<div class="signup-form">
-    <%= form_for(@user) do |f| %>
-      <%= f.label :name %>
-      <%= f.text_field :name %>
+  <div class="form-wrapper">
+    <div class="signup-form">
+        <%= form_for(@user) do |f| %>
+          <%= f.text_field :name, :placeholder => "名前", class: 'form-control' %>
 
-      <%= f.label :email %>
-      <%= f.email_field :email %>
+          <%= f.email_field :email, :placeholder => "メールアドレス", class: 'form-control' %>
 
-      <%= f.label :password %>
-      <%= f.password_field :password %>
+          <%= f.password_field :password, :placeholder => "パスワード", class: 'form-control' %>
 
-      <%= f.label :password_confirmation, "Confirmation" %>
-      <%= f.password_field :password_confirmation %>
-
-      <%= f.submit "登録する", class: "signup-btn" %>
-    <% end %>
+          <%= f.submit "登録する", class: "btn signup-btn" %>
+      <% end %>
+    </div>
+  </div>
 </div>
