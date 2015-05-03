@@ -2,9 +2,17 @@
   <div class="container">
     <%= link_to "Gatebook", root_path, id: "logo" %>
     <nav>
-      <div class="header-right">
-        <a href="#" class="login">ログイン</a>
-      </div>
+      <ul class="header-right">
+        <% if logged_in? %>
+          <li><%= @user.name %></li>
+          <li class="vertical-line"></li>
+          <li>
+            <%= link_to "ログアウト", logout_path, method: "delete" %>
+          </li>
+        <% else %>
+          <li class="link-bg"><%= link_to "ログイン", login_path %></li>
+        <% end %>
+      </ul>
     </nav>
   </div>
 </header>

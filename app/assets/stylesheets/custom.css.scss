@@ -3,7 +3,7 @@
 $gray: #848484;
 $gray-light: #eaeaea;
 $blue-dark: #364a4d;
-$blue-light: #0c9acd;
+$blue-light: #1f89e2;
 $green-light:  #239b76;
 
 @mixin box_sizing {
@@ -44,8 +44,17 @@ body {
   color: $blue-dark;
 }
 
+ul, li {
+  list-style-type: none;
+}
+
 a {
   text-decoration: none;
+  color: $blue-light;
+  &:hover {
+    text-decoration: underline;
+    color: darken($blue-light, 5%)
+  }
 }
 
 .container {
@@ -123,16 +132,31 @@ p {
 
 .header-right{
   float: right;
+  margin: 0 auto;
+  a {
+    color: white;
+    display: block;
+    text-decoration: none;
+  }
+  li {
+    line-height: 65px;
+    padding: 0 18px 0 0;
+    float: left;
+    color: white;
+  }
+}
+
+.vertical-line {
+  height: 22px;
+  margin-top: 22px;
+  border-left: 1px solid rgba(255,255,255,0.8);
+}
+
+.link-bg {
   background-color: rgba(255,255,255,0.3);
   transition: all 0.5s;
   &:hover {
     background-color: rgba(255,255,255,0.5);
-  }
-  a {
-    line-height: 65px;
-    padding: 0 25px;
-    color: white;
-    display: block;
   }
 }
 
@@ -164,7 +188,7 @@ footer {
   }
 }
 
-.signup-form {
+.account-info-form {
   width: 40%;
   border: 0;
   padding: 20px;
@@ -179,6 +203,15 @@ footer {
   background-color: $green-light;
   &:hover {
     background-color: lighten($green-light, 5%)
+  }
+}
+
+.login-btn {
+  cursor: pointer;
+  font-size: 18px;
+  background-color: $blue-light;
+  &:hover {
+    background-color: lighten($blue-light, 5%)
   }
 }
 

@@ -2,17 +2,16 @@
   <%= render 'shared/greeting_wanko' %>
   <div class="form-wrapper">
     <div class="account-info-form">
-      <%= form_for(@user) do |f| %>
-        <%= render 'shared/error_messages' %>
-
-        <%= f.text_field :name, :placeholder => "名前", class: 'form-control' %>
+      <%= form_for(:session, url: login_path) do |f| %>
 
         <%= f.email_field :email, :placeholder => "メールアドレス", class: 'form-control' %>
 
         <%= f.password_field :password, :placeholder => "パスワード", class: 'form-control' %>
 
-        <%= f.submit "登録する", class: "btn signup-btn" %>
+        <%= f.submit "ログイン", class: "btn login-btn" %>
       <% end %>
+
+       <small>既にアカウントをお持ちですか? <%= link_to "新規登録", root_path %></small>
     </div>
   </div>
 </div>
