@@ -1,0 +1,6 @@
+<%= form_for(@post) do |f| %>
+  <div class="field">
+    <%= f.text_area :content, placeholder: "近況を投稿する..." %>
+  </div>
+  <%= f.submit "投稿する", class: "btn primary-btn" %>
+<% end %>

@@ -1,5 +1,26 @@
-<div class="greeting">
-  <h1>Gatebookへ<br>ようこそ!</h1>
-
-  <%= image_tag("wanko.png", alt: "Gatebook wanko", id: "wanko") %>
+<% if logged_in? %>
+<div class="wrapper">
+  <aside class="sidebar">
+    <section class="user-info">
+      <%= render 'shared/user_info' %>
+    </section>
+    <section class="post_form">
+      <%= render 'shared/post_form' %>
+    </section>
+  </aside>
+  <div class="posts-list">
+    <h3>フィード</h3>
+    <%= render 'shared/feed' %>
+  </div>
 </div>
+<% else %>
+  <div class="wrapper">
+    <div class="greeting">
+      <h1>Gatebookへ<br>ようこそ!</h1>
+
+      <%= image_tag("wanko.png", alt: "Gatebook wanko", id: "wanko") %>
+    </div>
+
+     <%= render 'shared/signup_form' %>
+  </div>
+<% end %>

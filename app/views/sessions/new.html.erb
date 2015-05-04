@@ -1,5 +1,9 @@
 <div class="wrapper">
-  <%= render 'shared/greeting_wanko' %>
+  <div class="greeting">
+    <h1>Gatebookへ<br>ようこそ!</h1>
+
+    <%= image_tag("wanko.png", alt: "Gatebook wanko", id: "wanko") %>
+  </div>
   <div class="form-wrapper">
     <div class="account-info-form">
       <%= form_for(:session, url: login_path) do |f| %>

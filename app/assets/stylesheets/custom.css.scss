@@ -66,6 +66,7 @@ a {
 
 .wrapper {
   width: 100%;
+  @extend %cf;
 }
 
 /* ボタン
@@ -199,7 +200,7 @@ footer {
   float: right;
 }
 
-.signup-btn {
+.primary-btn {
   background-color: $green-light;
   &:hover {
     background-color: lighten($green-light, 5%)
@@ -260,10 +261,6 @@ input {
   border: 1px solid #ccc;
 }
 
-.form-wrapper {
-  @extend %cf;
-  }
-
 #error_explanation {
   color: red;
   ul {
@@ -298,7 +295,7 @@ input {
   color: #a94442;
 }
 
-/* サイドバー (ユーザープロフィール)
+/* サイドバー 
 ================================ */
 aside {
   section.user_info {
@@ -326,6 +323,11 @@ aside {
   }
 }
 
+.sidebar { 
+  width: 32%;
+  float: left;
+}
+
 /* 全てのユーザー一覧
 ================================ */
 .users {
@@ -334,5 +336,42 @@ aside {
     overflow: auto;
     padding: 10px 0;
     border-bottom: 1px solid $gray-light;
+  }
+}
+
+/* 投稿
+================================ */
+.posts {
+  li {
+    padding: 10px 0;
+    border-top: 1px solid #e8e8e8;
+  }
+  .content {
+    display: block;
+    img {
+      display: block;
+      padding: 5px 0;
+    }
+  }
+}
+  .timestamp {
+    color: $gray;
+    display: block;
+  }
+  
+aside {
+  textarea {
+    height: 120px;
+    margin-bottom: 5px;
+    font-size: 14px;
+    padding-left: 5px;
+  }
+}
+
+.posts-list {
+  width: 58%;
+  float: right;
+  h3 {
+    margin-left: 37px;
   }
 }
