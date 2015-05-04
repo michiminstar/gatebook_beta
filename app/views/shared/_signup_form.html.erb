@@ -1,5 +1,4 @@
 <div class="wrapper">
-  <%= render 'shared/greeting_wanko' %>
   <div class="form-wrapper">
     <div class="account-info-form">
       <%= form_for(@user) do |f| %>
@@ -11,7 +10,7 @@
 
         <%= f.password_field :password, :placeholder => "パスワード", class: 'form-control' %>
 
-        <%= f.submit "登録する", class: "btn signup-btn" %>
+        <%= f.submit "登録する", class: "btn primary-btn" %>
       <% end %>
     </div>
   </div>

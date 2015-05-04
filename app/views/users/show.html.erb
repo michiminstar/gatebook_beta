@@ -5,7 +5,14 @@
         <!-- のちほどプロフィール画像を追加 -->
         <%= @user.name %>
       </h1>
-       <small><%= link_to "プロフィールを編集", edit_user_path(current_user) %></small>
     </section>
   </aside>
+  <div class="posts-list">
+    <% if @user.posts.any? %>
+    <h3>投稿(<%= @user.posts.count %>)</h3>
+    <ol class="posts">
+      <%= render @posts %>
+    </ol>
+    <% end %>
+  </div>
 </div>
