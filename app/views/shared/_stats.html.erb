@@ -1,0 +1,25 @@
+<div class="stats">
+  <ul>
+    <li>
+      投稿
+      <strong id="posts">
+        <%=  user.posts.count %>
+      </strong>
+    </li>
+    <li>
+      <%= link_to friends_user_path(user) do%>
+        友達
+         <strong id="friends" class="stat">
+          <%= user.user_friendships.count %>
+        </strong>
+      <% end %>
+    </li>
+    <li>
+      <%= link_to friends_user_path(user) do%>
+        いいね!
+         <strong id="like" class="stat">
+        </strong>
+      <% end %>
+    </li>
+  </ul>
+</div>

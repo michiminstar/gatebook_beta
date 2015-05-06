@@ -25,6 +25,16 @@ group :development, :test do
   gem 'childprocess', '0.5.2'
   gem 'web-console', '2.0.0.beta3'
   gem 'spring',      '1.1.3'
+  gem 'pry-rails'
+  gem 'pry-byebug'
+  gem 'better_errors'
+  # ブラウザ上でデバッグ
+  gem 'binding_of_caller'
+  # consoleでSQLの結果を見やすくする
+  gem 'hirb'
+  gem 'hirb-unicode'
+  # ログを見やすくする
+  gem 'quiet_assets'
 end
 
 group :test do

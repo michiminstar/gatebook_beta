@@ -12,4 +12,11 @@ class Post < ActiveRecord::Base
         errors.add(:picture, "5MB以下の画像をアップロードしてください。")
       end
     end
+
+    def self.from_friends_with(user)
+      friend_ids = "SELECT user_id FROM user_friendships
+                              WHERE friend_id = :user_id"
+      where("user_id IN (#{friend_ids}) OR user_id = :user_id", 
+                  user_id: user.id )
+    end
 end
