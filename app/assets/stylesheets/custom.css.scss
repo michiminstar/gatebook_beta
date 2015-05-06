@@ -82,6 +82,40 @@ a {
   cursor: pointer;
 }
 
+.primary-btn {
+  background-color: $green-light;
+  &:hover {
+    background-color: lighten($green-light, 5%)
+  }
+}
+
+.login-btn {
+  font-size: 18px;
+  background-color: $blue-light;
+  &:hover {
+    background-color: lighten($blue-light, 5%)
+  }
+}
+
+.save-btn, .cancel-btn {
+  background-color: $green-light;
+  &:hover {
+    background-color: lighten($green-light, 5%)
+  }
+} 
+
+.add-btn  {
+  padding: 5px 30px;
+  font-size: 12px;
+  background-color: $green-light;
+  &:hover {
+    background-color: lighten($green-light, 5%);
+    color: white;
+    text-decoration: none;
+  }
+}
+
+
 /* フォント
 ================================ */
 h1, h2, h3, h4, h5, h6 {
@@ -200,22 +234,6 @@ footer {
   float: right;
 }
 
-.primary-btn {
-  background-color: $green-light;
-  &:hover {
-    background-color: lighten($green-light, 5%)
-  }
-}
-
-.login-btn {
-  font-size: 18px;
-  background-color: $blue-light;
-  &:hover {
-    background-color: lighten($blue-light, 5%)
-  }
-}
-
-
 /* プロフィール編集ページ
 ================================ */
 .edit {
@@ -225,12 +243,6 @@ footer {
     width: 100%;
     float: none;
     margin-top: 80px;
-  }
-}
-.save-btn {
-  background-color: $green-light;
-  &:hover {
-    background-color: lighten($green-light, 5%)
   }
 }
 
@@ -327,6 +339,36 @@ aside {
   width: 32%;
   float: left;
 }
+
+.stats {
+  // overflow: auto;
+  margin-top: 0;
+  padding: 0;
+  ul { margin-left: -40px;}
+  li {
+    float: left;
+    color: gray;
+    margin-right: 15px;
+    font-size: 12px;
+  }
+  a {
+    padding: 0 10px;
+    border-left: 1px solid $gray-light;
+    color: gray;
+    &:first-child {
+      padding-left: 0;
+      border: 0;
+    }
+    &:hover {
+      text-decoration: none;
+      color: $blue-light;
+    }
+  }
+  strong {
+    display: block;
+  }
+}
+
 
 /* 全てのユーザー一覧
 ================================ */
