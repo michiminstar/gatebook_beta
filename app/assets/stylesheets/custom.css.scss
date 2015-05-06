@@ -423,3 +423,10 @@ span.picture {
     margin-left: 37px;
   }
 }
+
+.like-wrapper {
+    @extend %cf;
+}
+.like-link {
+  float: right;
+}

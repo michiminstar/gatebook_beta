@@ -12,4 +12,7 @@
                                         data: { confirm: "本当に削除しますか?" } %>
     <% end %>
   </span>
+  <span id="post_<%= post.id %>" class= "like-wrapper">
+    <%= render 'posts/like_btn', post: post %>
+  </span>
 </li>

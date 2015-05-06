@@ -6,11 +6,12 @@ Rails.application.routes.draw do
   delete 'logout'  => 'sessions#destroy'
   resources :users do
     member do
-      get :friends
+      get :friends, :likes
     end
   end
   resources :posts,          only: [:create, :destroy]
   resources :user_friendships,   only: [:create, :destroy]
+  resources :likes,          only: [:create, :destroy]
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

@@ -2,7 +2,7 @@
   <ul>
     <li>
       投稿
-      <strong id="posts">
+      <strong id="posts" class="stat">
         <%=  user.posts.count %>
       </strong>
     </li>
@@ -15,9 +15,10 @@
       <% end %>
     </li>
     <li>
-      <%= link_to friends_user_path(user) do%>
+      <%= link_to likes_user_path(user) do%>
         いいね!
          <strong id="like" class="stat">
+          <%= user.likes.count %>
         </strong>
       <% end %>
     </li>

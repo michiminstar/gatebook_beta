@@ -48,6 +48,14 @@ class UsersController < ApplicationController
     render 'show_friend'
   end
 
+  def likes
+    @title = "いいね!"
+    @user = User.find(params[:id])
+    @post = @user.posts.build
+    @posts = @user.liked_posts.paginate(page: params[:page])
+    render 'show_liked'
+  end
+
   private
 
     def user_params
