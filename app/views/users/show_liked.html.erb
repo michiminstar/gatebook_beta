@@ -10,13 +10,12 @@
       <%= render 'shared/stats', user: @user %>
     </section>
   </aside>
-  <div class="posts-list">
-    <%= render 'add_friend_form' if logged_in? %>
-    <% if @user.posts.any? %>
-    <h3>投稿(<%= @user.posts.count %>)</h3>
-    <ol class="posts">
-      <%= render @posts %>
-    </ol>
+  <div class="liked-list">
+    <h3><%= @title %></h3>
+    <% if @posts.any? %>
+      <ul class="users">
+        <%= render @posts %>
+      </ul>
     <% end %>
   </div>
 </div>

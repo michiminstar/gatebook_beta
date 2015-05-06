@@ -6,6 +6,10 @@ class User < ActiveRecord::Base
                                                             dependent: :destroy
   has_many :friends, through: :user_friendships, source: :friend
 
+  # いいね!
+  has_many :likes
+  has_many :liked_posts, through: :likes, source: :post
+
   before_save { self.email = email.downcase }
 
   validates :name,  presence: true, length: { maximum: 50 }
@@ -32,5 +36,17 @@ class User < ActiveRecord::Base
   def unfriend!(other_user)
     user_friendships.find_by(friend_id: other_user.id).destroy
     other_user.user_friendships.find_by(friend_id: id).destroy
+  end
+
+  def like?(post)
+    likes.find_by(post_id: post.id)
+  end
+
+  def like!(post)
+    likes.create!(post_id: post.id)
+  end
+
+  def unlike!(post)
+    likes.find_by(post_id: post.id).destroy
   end
 end

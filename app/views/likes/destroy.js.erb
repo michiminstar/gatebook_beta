@@ -1,0 +1,2 @@
+$('#post_<%= @post.id %>').html('<%= escape_javascript(render("posts/like_btn", post: @post)) %>')
+$('.mypage #like').text('<%= current_user.likes.count %>')
